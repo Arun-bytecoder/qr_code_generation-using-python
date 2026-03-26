@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>QR Generator</title>
+    <title>QR Code Generator</title>
 </head>
 <body>
+
     <h2>QR Code Generator</h2>
-    
+
+    <!-- Form to take input -->
     <form method="POST">
-        <input type="text" name="data" placeholder="Enter text or URL" required>
-        <button type="submit">Generate</button>
+        <input type="text" name="data" placeholder="Enter URL like https://google.com" required>
+        <button type="submit">Generate QR</button>
     </form>
 
+    <br>
+
+    <!-- Show QR code if generated -->
     {% if qr %}
         <h3>Your QR Code:</h3>
         <img src="{{ qr }}" width="200">
     {% endif %}
+
 </body>
 </html>
